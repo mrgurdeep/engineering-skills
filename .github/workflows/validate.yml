@@ -1,0 +1,15 @@
+name: validate
+on: [push, pull_request]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 src/scripts/validate_skills.py
+      - run: python3 src/scripts/kb_check.py src/templates/workspace
+      - run: bash -n install.sh
+      - shell: pwsh
+        run: |
+          $e = $null
+          [System.Management.Automation.Language.Parser]::ParseFile("$PWD/install.ps1", [ref]$null, [ref]$e) | Out-Null
+          if ($e) { $e; exit 1 }

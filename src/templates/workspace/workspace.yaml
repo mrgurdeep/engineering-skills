@@ -1,0 +1,19 @@
+# Team workspace — shared. Clones go to local/repos/<id> (git-ignored).
+# Personal paths go in local/overrides.yaml (git-ignored), e.g.
+#   repos: { <id>: /Users/me/code/<id> }
+name: <team> workspace
+defaults:
+  jira_base_url: TODO            # https://<company>.atlassian.net
+  confluence_base_url: TODO      # https://<company>.atlassian.net/wiki
+projects: []
+# - id: shop-web
+#   name: Shop Web
+#   description: Customer web app
+#   git_url: https://github.com/<org>/shop-web.git
+#   branch: main
+#   jira: { project_key: SHOP, board_url: TODO }
+#   confluence: { space_key: SHOP, space_url: TODO, cr_parent_url: TODO }
+#   figma: { file_urls: [] }
+#   stack: [react, typescript]
+#   commands: { install: npm ci, lint: npm run lint, test: npm test, build: npm run build }
+#   depends_on: [shop-api]

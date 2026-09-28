@@ -1,0 +1,5 @@
+# Everything personal/local lives in local/ and is never shared:
+#   local/repos/<id>/     cloned project code
+#   local/overrides.yaml  personal paths/settings
+local/
+.DS_Store
